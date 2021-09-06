@@ -1,0 +1,73 @@
+package vetor1;
+
+import java.util.Random;
+
+public class PrincipalVetores {
+
+	public static void mostrarVetor(int v[]) {
+		for(int i = 0; i < v.length; i++) {
+			System.out.print("[" + v[i] + "]");
+		}
+	}
+	
+	public static void preencherVetor(int v[]) {
+		Random num = new Random();
+		
+		for(int i = 0; i < v.length; i++) {
+			int valor = num.nextInt(100);
+			v[i] = valor;
+		}
+		
+		System.out.println("\nVetor preenchido");
+	}
+	
+	public static boolean pesquisarVetor(int v[]) {
+		boolean r = false;
+		
+		for(int i = 0; i < v.length; i++) {
+			if(v[i] == 10) {
+				r = true;
+			}
+		}
+		
+		return r;
+	}
+	
+	public static void somaVetor(int v[]) {
+		int soma = 0;
+		
+		for(int i = 0; i < v.length; i++) {
+			soma += v[i];
+		}
+		
+		System.out.println("Resultado: " + soma);
+	}
+	
+	public static void mediaVetor(int v[]) {
+		int media = 0;
+		int soma = 0;
+		
+		for(int i = 0; i < v.length; i++) {
+			soma += v[i];
+		}
+		
+		media = soma/v.length;
+		
+		System.out.println("Resultado: " + media);
+	}
+	
+	public static void main(String[] args) {
+	    
+		int vetor1[] = new int[4];
+	    int vetor2[] = {10,20,30,40,52,68};
+
+	    mostrarVetor(vetor2);
+	    preencherVetor(vetor1);
+	    mostrarVetor(vetor1);
+	    System.out.println("\n3 está presente? " + pesquisarVetor(vetor2));
+	    somaVetor(vetor2);
+	    mediaVetor(vetor2);
+	    mediaVetor(vetor1);
+	}
+
+}
