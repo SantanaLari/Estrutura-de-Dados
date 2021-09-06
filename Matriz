@@ -1,0 +1,52 @@
+package matriz;
+
+import java.util.Random;
+
+public class PrincipalMatriz {
+
+	public static void preencherMatriz(int m[][]) {
+		Random num = new Random();
+		
+		for(int linha = 0;  linha < 5; linha++) {
+			for(int coluna = 0;  coluna < 10; coluna++) {
+				int valor = num.nextInt(300);
+				m[linha][coluna] = valor;
+			}
+		}
+		System.out.println("Matriz preenchida");
+	}
+	
+	public static void mostrarMatriz(int m[][]) {
+		
+		for(int linha = 0;  linha < 5; linha++) {
+			for(int coluna = 0;  coluna < 10; coluna++) {
+				System.out.print("[\t" + m[linha][coluna]+ "\t]");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static String pesquisaMatriz(int m[][]) {
+		String resposta = "Não está presente";
+		
+		for(int linha = 0;  linha < 5; linha++) {
+			for(int coluna = 0;  coluna < 10; coluna++) {
+				if(m[linha][coluna] == 201) {
+					resposta = ("Está presente na linha: " + linha + " e coluna: " + coluna); 
+				}
+			}
+		}
+		
+		return resposta;
+	}
+	
+	public static void main(String[] args) {
+		
+		int matriz [][] = new int [5][10];
+		
+		preencherMatriz(matriz);
+		mostrarMatriz(matriz);
+		System.out.println("O valor 201 está presente? " + pesquisaMatriz(matriz));
+	}
+
+}
