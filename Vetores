@@ -64,7 +64,7 @@ public class PrincipalVetores {
 	    mostrarVetor(vetor2);
 	    preencherVetor(vetor1);
 	    mostrarVetor(vetor1);
-	    System.out.println("\n3 está presente? " + pesquisarVetor(vetor2));
+	    System.out.println("\n10 está presente? " + pesquisarVetor(vetor2));
 	    somaVetor(vetor2);
 	    mediaVetor(vetor2);
 	    mediaVetor(vetor1);
